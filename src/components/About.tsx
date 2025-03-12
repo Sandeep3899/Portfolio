@@ -13,7 +13,7 @@ const About: React.FC = () => {
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
             {/* Updated Image Reference */}
             <img 
-              src="/Picture/Pic.jpg" // ✅ Reference from the public folder
+              src="/Pic.jpg" // ✅ Reference from the public folder
               alt="Profile"
               className="w-80 h-auto md:w-96 rounded-lg shadow-lg object-cover"
             />
