@@ -4,42 +4,54 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
+        
+        {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
         </div>
         
+        {/* Content Section */}
         <div className="flex flex-col md:flex-row items-center gap-12">
+          
+          {/* Profile Image */}
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
-            {/* Updated Image Reference */}
             <img 
-              src="/Pic.jpg" // ✅ Reference from the public folder
+              src="/Pic.jpg" // ✅ Ensure the image is placed inside 'public/' folder
               alt="Profile"
               className="w-80 h-auto md:w-96 rounded-lg shadow-lg object-cover"
             />
           </div>
           
+          {/* About Me Text */}
           <div className="md:ml-12 mt-6 md:mt-0 flex-1">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Who am I?</h3>
+            
             <p className="text-gray-700 mb-4">
-              Hi, I’m Sandeep! I’m a passionate software engineer who loves building scalable, efficient, and high-impact applications. 
-              Whether it's optimizing backend systems, designing cloud infrastructure, or creating seamless user experiences, 
+              Hi, I’m <strong>Sandeep</strong>! I’m a passionate software engineer who loves building scalable, efficient, and high-impact applications.
+              Whether it's optimizing backend systems, designing cloud infrastructure, or creating seamless user experiences,
               I enjoy solving complex problems and making technology work smarter.
             </p>
+            
             <p className="text-gray-700 mb-4">
-              I’ve worked on a variety of projects, from developing secure APIs and microservices to integrating cloud solutions and automating workflows. 
-              At Cognizant, I built and optimized APIs using Python, Django, Node.js, and .NET, improving performance and reducing latency. I’ve also worked with AWS, CI/CD pipelines, and React.js to create smooth and reliable applications. 
-              One of my favorite projects was developing a secure electronic voting system using homomorphic encryption, which made me appreciate the power of security and innovation in tech.
-            </p>
-            <p className="text-gray-700 mb-4">
-              When I'm not coding, you can find me exploring nature, reading tech blogs, or contributing to 
-              open-source projects. I believe in the power of technology to transform lives and am committed 
-              to creating meaningful digital experiences.
-            </p>
-            <p className="text-gray-700 mb-6">
-              I thrive in collaborative environments where I can learn, grow, and make a real impact. If you're looking for someone who loves problem-solving and building great software, let’s connect!
+              I’ve worked on a variety of projects, from developing secure APIs and microservices to integrating cloud solutions and automating workflows.
+              At <strong>Cognizant</strong>, I built and optimized APIs using <strong>Python, Django, Node.js, and .NET</strong>, improving performance and reducing latency.
+              I’ve also worked with <strong>AWS, CI/CD pipelines, and React.js</strong> to create smooth and reliable applications.
+              One of my favorite projects was developing a secure electronic voting system using <strong>homomorphic encryption</strong>, which made me appreciate
+              the power of security and innovation in tech.
             </p>
             
+            <p className="text-gray-700 mb-4">
+              When I'm not coding, you can find me exploring nature, reading tech blogs, or contributing to open-source projects.
+              I believe in the power of technology to transform lives and am committed to creating meaningful digital experiences.
+            </p>
+            
+            <p className="text-gray-700 mb-6">
+              I thrive in collaborative environments where I can learn, grow, and make a real impact.
+              If you're looking for someone who loves problem-solving and building great software, let’s connect!
+            </p>
+            
+            {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#contact" 
@@ -56,6 +68,7 @@ const About: React.FC = () => {
                 Download Resume
               </a>
             </div>
+
           </div>
         </div>
       </div>
