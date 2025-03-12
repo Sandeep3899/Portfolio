@@ -1,6 +1,4 @@
 import React from 'react';
-import ProfileImage from "C:/Users/yeruv/Downloads/project-bolt-sb1-vktrekd8/project/Picture/Pic.jpg";
-
 
 const About: React.FC = () => {
   return (
@@ -13,8 +11,9 @@ const About: React.FC = () => {
         
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
+            {/* Updated Image Reference */}
             <img 
-              src={ProfileImage} // Use the imported image
+              src="/Picture/Pic.jpg" // ✅ Reference from the public folder
               alt="Profile"
               className="w-80 h-auto md:w-96 rounded-lg shadow-lg object-cover"
             />
@@ -36,7 +35,6 @@ const About: React.FC = () => {
               When I'm not coding, you can find me exploring nature, reading tech blogs, or contributing to 
               open-source projects. I believe in the power of technology to transform lives and am committed 
               to creating meaningful digital experiences.
-
             </p>
             <p className="text-gray-700 mb-6">
               I thrive in collaborative environments where I can learn, grow, and make a real impact. If you're looking for someone who loves problem-solving and building great software, let’s connect!
