@@ -17,7 +17,7 @@ const About: React.FC = () => {
           {/* Profile Image */}
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
             <img 
-              src="https://github.com/Sandeep3899/Portfolio/blob/main/Public/Pic.jpg" 
+              src="https://raw.githubusercontent.com/Sandeep3899/Portfolio/main/Public/Pic.jpg" 
               alt="Profile"
               className="w-80 h-auto md:w-96 rounded-lg shadow-lg object-cover"
             />
@@ -60,7 +60,7 @@ const About: React.FC = () => {
                 Contact Me
               </a>
               <a 
-                href="https://drive.google.com/file/d/14YYgSBcUxhdU428jpB5Ir9oWtiscCL5R/view?usp=drive_link" 
+                href="https://drive.google.com/uc?export=view&id=14YYgSBcUxhdU428jpB5Ir9oWtiscCL5R" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-transparent hover:bg-indigo-50 text-indigo-600 border border-indigo-600 font-medium py-2 px-6 rounded-full transition-colors"
