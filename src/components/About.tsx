@@ -17,7 +17,7 @@ const About: React.FC = () => {
           {/* Profile Image */}
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
             <img 
-              src="Public/Pic.jpg" 
+              src="Public/pic.jpg" 
               alt="Profile"
               className="w-80 h-auto md:w-96 rounded-lg shadow-lg object-cover"
             />
