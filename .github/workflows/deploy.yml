@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch if it's different
+
+permissions:
+  contents: write  # Allows pushing to GitHub Pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: |
+          npm run build
+          echo "Build completed"
+
+      - name: Configure Git Identity
+        run: |
+          git config --global user.email "your-email@example.com"
+          git config --global user.name "Your Name"
+
+      - name: Deploy to GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Make sure you've added this secret in GitHub Settings
+        run: |
+          npm install -g gh-pages
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Sandeep3899/Portfolio.git
+          npm run deploy
