@@ -17,7 +17,7 @@ const experiences: ExperienceItem[] = [
     title: "Software Engineer Intern",
     company: "UL Solutions",
     location: "Fremont, CA",
-    date: "May 2024 - Aug 2024 and June 2023 - July 2023",
+    date: "Jan 2025 - Present | May 2024 - Aug 2024 | June 2023 - July 2023",
     description: [    ],
     type: "work"
   },
