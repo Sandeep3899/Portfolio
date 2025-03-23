@@ -28,17 +28,11 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Who am I?</h3>
             
             <p className="text-gray-700 mb-4">
-              Hi, I’m <strong>Sandeep</strong>! I’m a passionate software engineer who loves building scalable, efficient, and high-impact applications.
-              Whether it's optimizing backend systems, designing cloud infrastructure, or creating seamless user experiences,
-              I enjoy solving complex problems and making technology work smarter.
+              Hi, I’m <strong>Sandeep</strong>! I’m a passionate software engineer with a strong focus on backend development, cloud computing, and building reliable, high-performance applications. With hands-on experience at Cognizant and UL Solutions, I’ve designed and deployed scalable systems using technologies like Python, Node.js, .NET, and JavaScript. My work spans from creating RESTful APIs to building dynamic front-end interfaces and integrating CI/CD pipelines for efficient delivery. I’ve worked with cloud platforms like AWS and containerized deployments using Docker and Kubernetes, always aiming to optimize performance and security.
             </p>
             
             <p className="text-gray-700 mb-4">
-              I’ve worked on a variety of projects, from developing secure APIs and microservices to integrating cloud solutions and automating workflows.
-              At <strong>Cognizant</strong>, I built and optimized APIs using <strong>Python, Django, Node.js, and .NET</strong>, improving performance and reducing latency.
-              I’ve also worked with <strong>AWS, CI/CD pipelines, and React.js</strong> to create smooth and reliable applications.
-              One of my favorite projects was developing a secure electronic voting system using <strong>homomorphic encryption</strong>, which made me appreciate
-              the power of security and innovation in tech.
+             I’ve led the development of key features across web applications, contributed to automation testing initiatives, and helped improve internal knowledge-sharing by building documentation and training resources. One of my favorite projects involved creating a secure electronic voting system using Django and homomorphic encryption to ensure privacy and integrity—an experience that deepened my appreciation for the power of secure, ethical tech solutions.
             </p>
             
             <p className="text-gray-700 mb-4">
