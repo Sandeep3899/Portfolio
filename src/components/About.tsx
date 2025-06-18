@@ -28,21 +28,20 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Who am I?</h3>
             
             <p className="text-gray-700 mb-4">
-              Hi, I’m <strong>Sandeep</strong>! I’m a passionate software engineer with a strong focus on backend development, cloud computing, and building reliable, high-performance applications. With hands-on experience at Cognizant and UL Solutions, I’ve designed and deployed scalable systems using technologies like Python, Node.js, .NET, and JavaScript. My work spans from creating RESTful APIs to building dynamic front-end interfaces and integrating CI/CD pipelines for efficient delivery. I’ve worked with cloud platforms like AWS and containerized deployments using Docker and Kubernetes, always aiming to optimize performance and security.
+              Hi, I’m <strong>Sandeep</strong>!  I’m a Full Stack Software Engineer with 3.5+ years of hands-on experience designing and deploying scalable, secure, and high-performance web applications across fintech, healthcare, and customer service domains.
             </p>
             
             <p className="text-gray-700 mb-4">
-             I’ve led the development of key features across web applications, contributed to automation testing initiatives, and helped improve internal knowledge-sharing by building documentation and training resources. One of my favorite projects involved creating a secure electronic voting system using Django and homomorphic encryption to ensure privacy and integrity—an experience that deepened my appreciation for the power of secure, ethical tech solutions.
+              My expertise lies in building robust backend services with Java, Spring Boot, and RESTful APIs, as well as crafting responsive UIs using React.js and Angular. At companies like Varo Bank and Concentrix, I’ve developed cloud-native applications deployed on AWS, implemented real-time microservices, and automated CI/CD pipelines using Jenkins, Docker, and Kubernetes.
             </p>
             
             <p className="text-gray-700 mb-4">
-              When I'm not coding, you can find me exploring nature, reading tech blogs, or contributing to open-source projects.
-              I believe in the power of technology to transform lives and am committed to creating meaningful digital experiences.
+              From KYC and fraud detection modules in banking to patient scheduling in healthcare, my work has consistently focused on solving real-world problems with clean, maintainable code. I thrive in Agile teams, collaborate closely with cross-functional stakeholders, and follow best practices in security, testing (JUnit, Mockito), and monitoring (CloudWatch, Splunk).
             </p>
             
             <p className="text-gray-700 mb-6">
-              I thrive in collaborative environments where I can learn, grow, and make a real impact.
-              If you're looking for someone who loves problem-solving and building great software, let’s connect!
+              Outside of work, I enjoy exploring tech blogs, staying current with new frameworks, and building side projects that challenge me technically. I'm passionate about continuous learning and always looking for opportunities to make a real impact through software.
+              Let’s build something great together!
             </p>
             
             {/* Buttons */}
