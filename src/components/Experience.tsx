@@ -14,21 +14,27 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Software Engineer Intern",
-    company: "UL Solutions",
-    location: "Fremont, CA",
-    date: "Jan 2025 - Present | May 2024 - Aug 2024 | June 2023 - July 2023",
+    title: "Java Full Stack Developer",
+    company: "Varo Bank",
+    location: "Newark, CA",
+    date: "June 2024 - Present",
     description: [    ],
     type: "work"
   },
   {
-    title: "Software Engineer",
-    company: "Cognizant",
+    title: "Java Full Stack Developer",
+    company: "Concentrix",
     location: "Remote, India",
-    date: "May 2020 – June 2022",
-    description: [
-      
-    ],
+    date: "May 2023 – May 2024",
+    description: [   ],
+    type: "work"
+  },
+  {
+    title: "Software Engineer",
+    company: "Cloudnine Group of Hospitals",
+    location: "Remote, India",
+    date: "Jan 2021 – July 2022",
+    description: [   ],
     type: "work"
   },
   {
