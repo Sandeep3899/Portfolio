@@ -16,7 +16,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Java Full Stack Developer",
     company: "Varo Bank",
-    location: "Newark, CA",
+    location: "San Franscisco, CA",
     date: "June 2024 - Present",
     description: [    ],
     type: "work"
@@ -24,7 +24,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Java Full Stack Developer",
     company: "Concentrix",
-    location: "Remote, India",
+    location: "Newark, CA",
     date: "May 2023 – May 2024",
     description: [   ],
     type: "work"
