@@ -53,7 +53,7 @@ const About: React.FC = () => {
                 Contact Me
               </a>
               <a 
-                href="https://drive.google.com/uc?export=view&id=14YYgSBcUxhdU428jpB5Ir9oWtiscCL5R" 
+                href="https://drive.google.com/file/d/11l9x7FunF-mImDugyjNYBuSiBhHNGQG7/view?usp=drive_link" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-transparent hover:bg-indigo-50 text-indigo-600 border border-indigo-600 font-medium py-2 px-6 rounded-full transition-colors"
