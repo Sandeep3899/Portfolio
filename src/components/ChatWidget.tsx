@@ -21,7 +21,7 @@ export default function ChatWidget() {
     setMessages(newMessages);
 
     try {
-      const res = await fetch("http://localhost:8000/chat", {
+      const res = await fetch("https://portfolio-backend-7e12.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input, history: messages }),
