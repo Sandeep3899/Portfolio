@@ -41,6 +41,14 @@ const experiences: ExperienceItem[] = [
     type: "work",
   },
   {
+    title: "Master of Science in Computer Science",
+    company: "California State University, Sacramento",
+    location: "Sacramento, CA",
+    date: "Aug 2022 – May 2024",
+    description: [],
+    type: "education",
+  },
+  {
     title: "Software Engineer",
     company: "Cloudnine Group of Hospitals",
     location: "Remote, India",
@@ -52,14 +60,7 @@ const experiences: ExperienceItem[] = [
     ],
     type: "work",
   },
-  {
-    title: "Master of Science in Computer Science",
-    company: "California State University, Sacramento",
-    location: "Sacramento, CA",
-    date: "Aug 2022 – May 2024",
-    description: [],
-    type: "education",
-  },
+
   {
     title: "Bachelor of Engineering in Computer Science",
     company: "Acharya Nagarjuna University",
