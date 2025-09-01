@@ -1,14 +1,15 @@
 import { useState } from "react";
+import { FiMessageSquare } from "react-icons/fi"; // <-- Add icon
 
 interface Message {
-  role: "user" | "bot";
+  role: string;
   content: string;
 }
 
 export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // <-- Start closed
   const [isMinimized, setIsMinimized] = useState(false);
 
   async function sendMessage() {
@@ -41,79 +42,83 @@ export default function ChatWidget() {
         { role: "bot", content: "⚠️ Unable to reach server. Try again." },
       ]);
     }
+
     setInput("");
   }
 
-  function handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === "Enter") {
-      sendMessage();
-    }
-  }
-
-  if (!isOpen) {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 transition"
-      >
-        💬
-      </button>
-    );
-  }
-
   return (
-    <div className="fixed bottom-6 right-6 w-[400px] bg-white shadow-2xl rounded-lg border border-gray-200">
-      {/* Header */}
-      <div className="flex justify-between items-center bg-blue-500 text-white p-3 rounded-t-lg">
-        <span className="font-semibold">Chat with Sandeep's Assistant</span>
-        <div className="space-x-2">
-          <button
-            onClick={() => setIsMinimized(!isMinimized)}
-            className="bg-blue-400 px-2 py-1 rounded"
-          >
-            {isMinimized ? "🔼" : "🔽"}
-          </button>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="bg-red-500 px-2 py-1 rounded"
-          >
-            ❌
-          </button>
-        </div>
-      </div>
+    <div className="fixed bottom-5 right-5 z-50">
+      {/* Floating Chat Icon */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700"
+        >
+          <FiMessageSquare size={24} />
+        </button>
+      )}
 
-      {/* Chat Body */}
-      {!isMinimized && (
-        <div className="flex flex-col p-4 h-[500px]">
-          <div className="flex-1 overflow-y-auto mb-2">
-            {messages.map((m: Message, i: number) => (
-              <div
-                key={i}
-                className={`p-2 my-1 rounded-lg ${
-                  m.role === "user"
-                    ? "bg-blue-100 text-right"
-                    : "bg-gray-100 text-left"
-                }`}
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="w-80 bg-white border rounded-lg shadow-lg flex flex-col">
+          {/* Header */}
+          <div className="flex justify-between items-center p-2 bg-blue-500 text-white rounded-t-lg">
+            <span>Chat with Sandeep's Assistant</span>
+            <div>
+              <button
+                onClick={() => setIsMinimized(!isMinimized)}
+                className="px-2"
               >
-                {m.content}
+                {isMinimized ? "🔼" : "🔽"}
+              </button>
+              <button onClick={() => setIsOpen(false)} className="px-2">
+                ❌
+              </button>
+            </div>
+          </div>
+
+          {/* Messages */}
+          {!isMinimized && (
+            <>
+              <div className="p-3 h-64 overflow-y-auto">
+                {messages.map((msg, idx) => (
+                  <div
+                    key={idx}
+                    className={`mb-2 ${
+                      msg.role === "user" ? "text-right" : "text-left"
+                    }`}
+                  >
+                    <span
+                      className={`inline-block px-3 py-2 rounded-lg ${
+                        msg.role === "user"
+                          ? "bg-blue-200 text-blue-900"
+                          : "bg-gray-200 text-gray-900"
+                      }`}
+                    >
+                      {msg.content}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="flex">
-            <input
-              className="flex-1 border rounded-l p-2"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyPress}
-              placeholder="Ask me something..."
-            />
-            <button
-              className="bg-blue-500 text-white px-4 rounded-r"
-              onClick={sendMessage}
-            >
-              Send
-            </button>
-          </div>
+
+              {/* Input */}
+              <div className="p-2 flex border-t">
+                <input
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+                  className="flex-1 p-2 border rounded"
+                  placeholder="Ask me something..."
+                />
+                <button
+                  onClick={sendMessage}
+                  className="ml-2 bg-blue-500 text-white px-3 py-1 rounded"
+                >
+                  Send
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
     </div>
