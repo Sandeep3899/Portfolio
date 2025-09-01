@@ -26,11 +26,14 @@ app = FastAPI()
 # ---------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5173", "http://localhost:5173", "https://sandeep3899.github.io"],
+    allow_origins=[
+        "http://127.0.0.1:5173",
+        "http://localhost:5173",
+        "https://sandeep3899.github.io"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    
 )
 
 # ---------------------------
@@ -70,15 +73,17 @@ async def root():
 @app.post("/chat")
 async def chat(req: ChatRequest):
     try:
-        # Format chat history properly
+        # Format chat history
         formatted_history = [
             {"role": "assistant" if msg["role"] == "bot" else msg["role"], "content": msg["content"]}
             for msg in req.history
             if "role" in msg and "content" in msg
         ]
 
-        # Links + Resume Context
+        # Build links context
         links_context = "\n".join([f"{k.capitalize()}: {v}" for k, v in LINKS.items()])
+
+        # Combine context
         context = (
             f"You are a helpful assistant that always speaks in third person about Sandeep.\n"
             f"Here are Sandeep's important links:\n{links_context}\n\n"
@@ -91,7 +96,14 @@ async def chat(req: ChatRequest):
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-                {"role": "system", "content": "Always answer in third person about Sandeep."},
+                {
+                    "role": "system",
+                    "content": (
+                        "You are Sandeep's AI assistant. "
+                        "Always introduce yourself as an AI assistant, not as Sandeep. "
+                        "You can talk about Sandeep in third person and share his resume, links, and experience."
+                    )
+                },
                 *formatted_history,
                 {"role": "user", "content": context},
             ],

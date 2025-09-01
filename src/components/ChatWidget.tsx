@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiMessageSquare } from "react-icons/fi"; // <-- Add icon
+import { FiMessageSquare } from "react-icons/fi";
 
 interface Message {
   role: string;
@@ -7,9 +7,15 @@ interface Message {
 }
 
 export default function ChatWidget() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: "bot",
+      content:
+        "Hi! I'm Sandeep's AI Assistant 🤖. I can tell you about his skills, experience, and projects!",
+    },
+  ]);
   const [input, setInput] = useState("");
-  const [isOpen, setIsOpen] = useState(false); // <-- Start closed
+  const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
 
   async function sendMessage() {
@@ -54,13 +60,20 @@ export default function ChatWidget() {
           onClick={() => setIsOpen(true)}
           className="p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700"
         >
-          <FiMessageSquare size={24} />
+          <FiMessageSquare size={28} />
         </button>
       )}
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="w-80 bg-white border rounded-lg shadow-lg flex flex-col">
+        <div
+          className="bg-white border rounded-lg shadow-lg flex flex-col"
+          style={{
+            width: "400px",
+            height: isMinimized ? "60px" : "550px",
+            transition: "all 0.3s ease-in-out",
+          }}
+        >
           {/* Header */}
           <div className="flex justify-between items-center p-2 bg-blue-500 text-white rounded-t-lg">
             <span>Chat with Sandeep's Assistant</span>
@@ -80,7 +93,7 @@ export default function ChatWidget() {
           {/* Messages */}
           {!isMinimized && (
             <>
-              <div className="p-3 h-64 overflow-y-auto">
+              <div className="p-3 flex-1 overflow-y-auto">
                 {messages.map((msg, idx) => (
                   <div
                     key={idx}
