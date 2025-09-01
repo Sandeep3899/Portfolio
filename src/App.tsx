@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ChatWidget from "./components/ChatWidget";
+import Certifications from "./components/Certifications";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
         <Hero />
         <About />
         <Experience />
+        <Certifications />
         <Projects />
-        <Skills />
         <Contact />
         <ChatWidget />
       </main>
