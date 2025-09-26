@@ -44,7 +44,7 @@ const experiences: ExperienceItem[] = [
     title: "Master of Science in Computer Science",
     company: "California State University, Sacramento",
     location: "Sacramento, CA",
-    date: "Aug 2022 – May 2024",
+    date: "Aug 2022 – December 2024",
     description: [],
     type: "education",
   },
