@@ -17,10 +17,17 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    title: "Software Engineer",
+    company: "Syntax LLC",
+    location: "New York City, NY",
+    date: "Nov 2025 - Present",
+    type: "work",
+  }
+  {
     title: "Java Full Stack Developer",
     company: "Varo Bank",
     location: "San Francisco, CA",
-    date: "June 2024 – Present",
+    date: "June 2024 – Oct 2025",
     description: [
       "Developing and enhancing scalable, cloud-native financial applications using Java, Spring Boot, and React.js.",
       "Implementing secure REST APIs, integrating real-time transaction features, and improving system performance.",
