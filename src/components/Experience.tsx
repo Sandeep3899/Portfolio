@@ -22,7 +22,7 @@ const experiences: ExperienceItem[] = [
     location: "New York City, NY",
     date: "Nov 2025 - Present",
     type: "work",
-  }
+  },
   {
     title: "Java Full Stack Developer",
     company: "Varo Bank",
