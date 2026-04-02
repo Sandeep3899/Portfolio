@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
     title: "Java Full Stack Developer",
     company: "Varo Bank",
     location: "San Francisco, CA",
-    date: "June 2024 – Oct 2025",
+    date: "Jan 2025 – Oct 2025",
     description: [
       "Developing and enhancing scalable, cloud-native financial applications using Java, Spring Boot, and React.js.",
       "Implementing secure REST APIs, integrating real-time transaction features, and improving system performance.",
@@ -35,18 +35,7 @@ const experiences: ExperienceItem[] = [
     ],
     type: "work",
   },
-  {
-    title: "Java Full Stack Developer",
-    company: "Concentrix",
-    location: "Newark, CA",
-    date: "May 2023 – May 2024",
-    description: [
-      "Built and deployed customer service applications with Java, Angular, and AWS Cloud services.",
-      "Optimized microservices architecture for better scalability, security, and fault tolerance.",
-      "Led CI/CD implementation with Jenkins, Docker, and Kubernetes for faster deployments.",
-    ],
-    type: "work",
-  },
+
   {
     title: "Master of Science in Computer Science",
     company: "California State University, Sacramento",
@@ -54,18 +43,6 @@ const experiences: ExperienceItem[] = [
     date: "Aug 2022 – Dec 2024",
     description: [],
     type: "education",
-  },
-  {
-    title: "Software Engineer",
-    company: "Cloudnine Group of Hospitals",
-    location: "Remote, India",
-    date: "Jan 2021 – July 2022",
-    description: [
-      "Designed and developed healthcare web solutions to streamline patient scheduling and hospital operations.",
-      "Worked closely with doctors and admin teams to improve system usability and reduce manual effort.",
-      "Integrated security best practices and data monitoring using Splunk and AWS CloudWatch.",
-    ],
-    type: "work",
   },
 
   {
